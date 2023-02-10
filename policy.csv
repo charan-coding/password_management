@@ -1,2 +1,2 @@
-min_length,max_length,min_upper,min_lower,min_number,min_specialchar,Hours_to_reset,updatedOn
-9,15,4,2,1,2,36,"February 10, 2023"
+min_length,max_length,min_upper,min_lower,min_number,min_specialchar,Days_to_reset,updatedOn
+4,6,1,1,1,1,2,"February 10, 2023"

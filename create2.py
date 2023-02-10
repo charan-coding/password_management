@@ -13,7 +13,7 @@ def authenticate(id_no, psw):
 
 def check_and_validate(policy):
     csv_dict = policy["rules"]
-    csv_dict["Hours_to_reset"] = policy["Hours_to_reset"]
+    csv_dict["Days_to_reset"] = policy["Days_to_reset"]
     today = date.today()
     csv_dict["updatedOn"] = today.strftime("%B %d, %Y")
 
