@@ -1,16 +1,15 @@
 from flask import Flask, request
 import mysql.connector
 import requests
-from create2 import authenticate, check_and_validate, write, sql
-from batch_gen_pass import generate_password, leak_check, csv_file_psw
-import create2 as c
-from newuser2 import *
-import batch_gen_pass as b
+from Extra_Create_policy_Validation import authenticate, check_and_validate, write, sql
+from Extra_Create_policy_batch_Generation import generate_password, leak_check, csv_file_psw
+import Extra_Create_policy_Validation as c
+
 
 app = Flask(__name__)
-@app.route("/updatepolicy", methods=["POST"])
+@app.route("/createpolicy", methods=["POST"])
 
-def updatepolicy():
+def createpolicy():
     policy = request.get_json()
     try:
         authenticate(policy["Admin"]["id"], policy["Admin"]["pass"])
@@ -44,11 +43,14 @@ def updatepolicy():
         return {"InvalidBatchError": "Batch Size is not specified"}
 
     try:
-        c.up_write(csv_dict)
+        write(csv_dict)
     except IOError:
         return {"Error": "I/O"}
 
-
+    try:
+        sql(csv_dict)
+    except mysql.connector.Error as err:
+        return{"Error":str(err)}
 
     pass_list=[]
     while len(pass_list)<(policy["Batch_size"]):
@@ -68,14 +70,9 @@ def updatepolicy():
 
     csv_file_psw(pass_list)
 
-    try:
-        c.up_sql()
-    except mysql.connector.Error as err:
-        return {"Error": str(err).split(':')[1]}
-
-    return{"Policy": "Updated"}
+    return{"Policy": "Created"}
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5002)
+    app.run(debug=True)

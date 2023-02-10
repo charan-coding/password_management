@@ -1,8 +1,8 @@
 import unittest
-from create_policy import *
-from batch_gen_pass import *
+from Create_policy_Server import *
+from Extra_Create_policy_batch_Generation import *
 from unittest.mock import patch
-from assign import *
+from Assign_users_Server import *
 import re
 
 

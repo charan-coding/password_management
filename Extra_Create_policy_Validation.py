@@ -4,7 +4,7 @@ import os
 import time
 import mysql.connector
 import pandas as pd
-from newuser2 import *
+from Extra_Assign_users_Sql import *
 
 def authenticate(id_no, psw):
     if id_no != 12345 or psw != "hehehelol":
@@ -76,7 +76,6 @@ class BadSize(Exception):
     pass
 
 def write(csv_dict):
-    # Convert the list of dictionaries into a Pandas DataFrame
     df = pd.DataFrame([csv_dict])
     df.to_csv("policy.csv", index=False)
 
