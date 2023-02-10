@@ -1,7 +1,7 @@
 # PMS-Charan
 
 # Servers
-This PMS project has 10 functionalities:
+This PMS project has 9 functionalities:
 
     1.Create Policy - inputs a policy, batch generates passwords and creates table skeleton
     2.Assign Users - allows addition of users to the tables and assigns them a ranomd initial password along with a state
@@ -11,6 +11,7 @@ This PMS project has 10 functionalities:
     6.Login App
     7.User Reset (Master)
     8.Admin Reset (Master)
+    9.Admin Delete (Master and App)
 
 ## Suggestions for a good README
 Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
