@@ -37,10 +37,15 @@ def insertsql(response):
         mycursor.execute(str(query))
     try:
         pas = getrandom_pass()
+        master_creds=[(name, pas)]
+        with open('master_passwords.txt', 'a') as file:
+            for user_id, password in master_creds:
+                file.write("Username: {} Password: {}\n".format(user_id, password))
         # Hashing the input password using sha1 algorithm
         psw = hashlib.sha1(pas.encode()).hexdigest()
         # Converting the hashed password to uppercase
         psw =psw.upper()
+
     except ValueError:
         raise RanOutOfPsWs
     query=str(f"INSERT INTO master_password VALUES(\"{userID}\",\"{name}\",\"{psw}\", \"reset\", NOW());")

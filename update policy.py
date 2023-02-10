@@ -48,10 +48,7 @@ def updatepolicy():
     except IOError:
         return {"Error": "I/O"}
 
-    try:
-        c.up_sql()
-    except mysql.connector.Error as err:
-        return{"Error":str(err).split(':')[1]}
+
 
     pass_list=[]
     while len(pass_list)<(policy["Batch_size"]):
@@ -70,6 +67,11 @@ def updatepolicy():
             pass_list.append(psw)
 
     csv_file_psw(pass_list)
+
+    try:
+        c.up_sql()
+    except mysql.connector.Error as err:
+        return {"Error": str(err).split(':')[1]}
 
     return{"Policy": "Updated"}
 
