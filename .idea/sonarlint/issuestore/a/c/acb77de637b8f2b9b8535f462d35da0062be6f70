@@ -1,0 +1,9 @@
+
+dpython:S2208"GImport only needed names or import the module and then use its members.(¼Ü¢Áüÿÿÿÿ
+dpython:S2208"GImport only needed names or import the module and then use its members.(Õ‡­öûÿÿÿÿ
+_python:S2208"GImport only needed names or import the module and then use its members.(Ðÿ§¢
+spython:S117H"\Rename this local variable "Digit_count" to match the regular expression ^[_a-z][a-z0-9_]*$.(ä–ä‹
+npython:S117N"WRename this local variable "Length" to match the regular expression ^[_a-z][a-z0-9_]*$.(º‡Ÿð
+spython:S117E"\Rename this local variable "Lower_count" to match the regular expression ^[_a-z][a-z0-9_]*$.(îÝ•à
+upython:S117K"^Rename this local variable "Special_count" to match the regular expression ^[_a-z][a-z0-9_]*$.(ë‰ÅÏ
+spython:S117B"\Rename this local variable "Upper_count" to match the regular expression ^[_a-z][a-z0-9_]*$.(¼Ùé€
