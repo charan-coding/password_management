@@ -54,7 +54,9 @@ def createpolicy():
 
     pass_list=[]
     while len(pass_list)<(policy["Batch_size"]):
-        psw = generate_password(csv_dict["min_length"],csv_dict["max_length"],csv_dict["min_specialchar"], csv_dict["min_upper"],csv_dict["min_lower"],csv_dict["min_number"])
+        psw = generate_password(csv_dict["min_length"],csv_dict["max_length"],
+                                csv_dict["min_specialchar"], csv_dict["min_upper"],
+                                csv_dict["min_lower"],csv_dict["min_number"])
         try:
             flag = leak_check(psw)
         except requests.exceptions.HTTPError as errh:

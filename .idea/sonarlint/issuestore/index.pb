@@ -6,11 +6,6 @@ C
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 D
 master_passwords.txt,6\e\6e1047e6c91dc4937515c7f698e6ee86d6297df5
-:
-
-policy.csv,1\d\1db6bf11f988c34ef17d0f34795049923dcdf57c
-C
-passwords batch.csv,d\6\d6a56d31e0f7a5b60ebfc34c1c5dd6f627cb199d
 F
 Login_master_Server.py,6\b\6b25e7829c53bcf3e0f565c6de89252ca7476047
 C
@@ -29,3 +24,21 @@ E
 Admin_Reset_Server.py,1\9\19e296b2116d31541db12cd0c41d77e217e2061f
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+H
+Update_policy_Request.py,c\0\c031cb1eb68af32af9c20a7569c19bfa3a1dc6f0
+E
+User_reset_Request.py,9\3\9370ed8720ff2d3de3cebcf671163d723582fc64
+D
+Add_Batch_Request.py,8\c\8cfb96835a9940f43b0150d855bcba0f74aabc11
+G
+Login_master_Request.py,7\7\77f20a931644df7a8224f7e88b8b2d2cc73c42e7
+F
+Admin_Reset_Request.py,7\1\71f1a368c7412b7bb41951c7d5170f2cc25d0c4d
+F
+Admin_Delete_Server.py,4\c\4c18c38b93b4cb801607b5afd0fe2fee1946fd73
+D
+Login_app_Request.py,7\8\787b89f0b5a098ea3b731a5e04b8e75bed7fd29e
+G
+Admin_Delete_Request.py,f\d\fd6b9fdd81f2c57c0c28d1bb9e5c4dacee8866fa
+F
+Assign_users_Server.py,0\2\02cf89d4171a706c854e48e4ace3b6d2ae1701b2
